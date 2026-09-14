@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Fashion</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+font-family:Arial,sans-serif;
+background:#050505;
+color:white;
+}
+header{
+background:#050505;
+border-bottom:1px solid #222;
+padding:18px 6%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:100;
+}
+.logo{font-size:24px;font-weight:bold}
+.logo span{color:#20d66b}
+nav a{
+color:white;
+text-decoration:none;
+margin-left:18px;
+font-size:14px;
+}
+nav a:hover{color:#20d66b}
+
+.hero{
+min-height:480px;
+display:flex;
+align-items:center;
+padding:70px 7%;
+background:linear-gradient(120deg,#050505,#101a13);
+}
+.hero-text{max-width:650px}
+.hero h1{
+font-size:50px;
+line-height:1.1;
+margin-bottom:20px;
+}
+.hero h1 span{color:#20d66b}
+.hero p{
+color:#bbb;
+font-size:18px;
+line-height:1.6;
+margin-bottom:28px;
+}
+.btn{
+display:inline-block;
+background:#20d66b;
+color:#000;
+padding:14px 25px;
+border-radius:7px;
+text-decoration:none;
+font-weight:bold;
+}
+
+section{padding:55px 7%}
+.title{text-align:center;margin-bottom:35px}
+.title h2{font-size:32px}
+.title p{color:#aaa;margin-top:8px}
+
+.categories{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:18px;
+}
+.category{
+background:#111;
+border:1px solid #252525;
+padding:35px 15px;
+text-align:center;
+border-radius:12px;
+}
+.category h3{margin-top:12px}
+.category div{font-size:42px}
+
+.products{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:22px;
+}
+.product{
+background:#111;
+border:1px solid #252525;
+border-radius:12px;
+overflow:hidden;
+}
+.product-img{
+height:230px;
+background:#202020;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:70px;
+}
+.product-info{padding:18px}
+.product-info h3{margin-bottom:8px}
+.price{
+color:#20d66b;
+font-size:20px;
+font-weight:bold;
+margin:10px 0;
+}
+.product button{
+width:100%;
+padding:12px;
+background:#20d66b;
+border:none;
+border-radius:6px;
+cursor:pointer;
+font-weight:bold;
+}
+
+.about{
+background:#0d0d0d;
+text-align:center;
+}
+.about p{
+max-width:750px;
+margin:auto;
+color:#bbb;
+line-height:1.7;
+}
+
+.order{
+max-width:650px;
+margin:auto;
+}
+form{
+background:#111;
+padding:25px;
+border-radius:12px;
+border:1px solid #252525;
+}
+input,select,textarea{
+width:100%;
+padding:14px;
+margin:8px 0 15px;
+background:#050505;
+color:white;
+border:1px solid #333;
+border-radius:6px;
+}
+textarea{height:100px}
+form button{
+width:100%;
+padding:15px;
+background:#20d66b;
+border:0;
+border-radius:7px;
+font-weight:bold;
+cursor:pointer;
+}
+
+footer{
+background:#000;
+border-top:1px solid #222;
+padding:35px 7%;
+text-align:center;
+color:#888;
+}
+footer strong{color:white}
+footer span{color:#20d66b}
+
+@media(max-width:800px){
+nav{display:none}
+.hero{padding:55px 7%}
+.hero h1{font-size:38px}
+.categories{grid-template-columns:repeat(2,1fr)}
+.products{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">Smart <span>Fashion</span></div>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#women">Women</a>
+<a href="#men">Men</a>
+<a href="#kids">Kids</a>
+<a href="#products">Products</a>
+<a href="#order">Order</a>
+</nav>
+</header>
+
+<section class="hero" id="home">
+<div class="hero-text">
+<h1>Style That <span>Speaks</span> for You</h1>
+<p>
+Discover stylish and quality clothing for every occasion.
+Shop your favorite fashion items from Smart Fashion.
+</p>
+<a href="#products" class="btn">Shop Now</a>
+</div>
+</section>
+
+<section>
+<div class="title">
+<h2>Shop By Category</h2>
+<p>Find your perfect style</p>
+</div>
+
+<div class="categories">
+
+<div class="category" id="women">
+<div>👗</div>
+<h3>Women</h3>
+</div>
+
+<div class="category" id="men">
+<div>👔</div>
+<h3>Men</h3>
+</div>
+
+<div class="category" id="kids">
+<div>🧒</div>
+<h3>Kids</h3>
+</div>
+
+<div class="category">
+<div>✨</div>
+<h3>New Arrivals</h3>
+</div>
+
+</div>
+</section>
+
+<section id="products">
+<div class="title">
+<h2>Featured Products</h2>
+<p>Our latest fashion collection</p>
+</div>
+
+<div class="products">
+
+<div class="product">
+<div class="product-img">👗</div>
+<div class="product-info">
+<h3>Stylish Women's Dress</h3>
+<div class="price">৳ 1,250</div>
+<button onclick="order('Stylish Womens Dress','1250')">
+Order Now
+</button>
+</div>
+</div>
+
+<div class="product">
+<div class="product-img">👕</div>
+<div class="product-info">
+<h3>Premium Men's Shirt</h3>
+<div class="price">৳ 850</div>
+<button onclick="order('Premium Mens Shirt','850')">
+Order Now
+</button>
+</div>
+</div>
+
+<div class="product">
+<div class="product-img">👚</div>
+<div class="product-info">
+<h3>Fashion Top</h3>
+<div class="price">৳ 650</div>
+<button onclick="order('Fashion Top','650')">
+Order Now
+</button>
+</div>
+</div>
+
+<div class="product">
+<div class="product-img">🧥</div>
+<div class="product-info">
+<h3>Casual Jacket</h3>
+<div class="price">৳ 1,550</div>
+<button onclick="order('Casual Jacket','1550')">
+Order Now
+</button>
+</div>
+</div>
+
+<div class="product">
+<div class="product-img">👖</div>
+<div class="product-info">
+<h3>Classic Jeans</h3>
+<div class="price">৳ 1,100</div>
+<button onclick="order('Classic Jeans','1100')">
+Order Now
+</button>
+</div>
+</div>
+
+<div class="product">
+<div class="product-img">👕</div>
+<div class="
